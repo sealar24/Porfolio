@@ -13,10 +13,31 @@
   --transition-fast: 0.3s ease;
 }
 
+/* Fondo fijo con imagen y opacidad controlada */
 body {
-  font-family: var(--font-primary);
-  background-color: var(--color-bg-main);
-  color: var(--color-text-main);
+  position: relative;
+  background-color: #0a192f; /* Color de fondo base detrás de la imagen */
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* Mantiene la imagen fija al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Asegura que quede detrás de todo el contenido */
+  
+  /* Configuración de la imagen */
+  background-image: url('../img/fondo.png'); /* Cambiá por la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Transparencia al 50% */
+  opacity: 0.5; 
 }
 
 /* --- HEADER Y NAVEGACIÓN (FLEXBOX) --- */
