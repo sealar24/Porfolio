@@ -52,4 +52,24 @@ document.addEventListener('DOMContentLoaded', () => {
       feedbackElement.classList.add('hidden');
     }, 5000);
   }
+  // Lógica del Menú Hamburguesa
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+if (hamburgerBtn && navMenu) {
+  // Alternar apertura al hacer clic en la hamburguesa
+  hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Cerrar el menú automáticamente al tocar cualquier opción de navegación
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburgerBtn.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+}
 });

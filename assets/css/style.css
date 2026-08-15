@@ -64,6 +64,75 @@ body {
   color: var(--color-primary);
 }
 
+/* --- BOTÓN HAMBURGUESA (Oculto por defecto en escritorio) --- */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+}
+
+.hamburger-btn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* --- ADAPTACIÓN RESPONSIVE (MÓVILES) --- */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: flex; /* Se muestra en celulares */
+  }
+
+  .nav {
+    position: fixed;
+    top: 60px; /* Altura debajo del header */
+    left: -100%; /* Oculto fuera de la pantalla */
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(10px);
+    transition: left 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Clase que activa la apertura del menú con JavaScript */
+  .nav.active {
+    left: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1.25rem;
+  }
+
+  /* Animación de la cruz (X) en el botón */
+  .hamburger-btn.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger-btn.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-btn.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
 /* --- SECCIONES Y CONTENEDORES --- */
 .section {
   padding: 4rem 2rem;
