@@ -16,13 +16,24 @@
 </head>
 <body>
 
-  <!-- Encabezado y Navegación Principal -->
-  <header class="header">
-   <div class="logo">
-  <a href="#hero">
-    <img src="assets/img/logo.png" alt="Logo de Sergio" class="logo-img">
-  </a>
-</div>
+ <!-- Encabezado y Navegación Principal -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-tooltip-container">
+      <a href="#hero">
+        <img src="assets/img/logo.png" alt="Logo de Sergio" class="logo-img">
+      </a>
+      <!-- Cartel desplegable con enlaces cliqueables -->
+      <div class="tooltip-text">
+        <p>📧 sergio@ejemplo.com</p>
+        <p>📱 +54 9 3751 12-3456</p>
+        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="tooltip-link">
+          💼 Ver mi LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+
 <!-- Botón Menú Hamburguesa -->
   <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
     <span class="bar"></span>
@@ -35,6 +46,7 @@
         <li><a href="#hero" class="nav-link">Inicio</a></li>
         <li><a href="#about" class="nav-link">Sobre mí</a></li>
         <li><a href="#skills" class="nav-link">Habilidades</a></li>
+        <li><a href="#experience" class="nav-link">Proyectos</a></li>
         <li><a href="#personal" class="nav-link">Proyectos</a></li>
         <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
@@ -121,6 +133,59 @@
 
       </div>
     </section>
+
+<!-- SECCIÓN EXPERIENCIA Y PROYECTOS -->
+<section id="experience" class="section">
+  <h2 class="section-title">Trabajos y Proyectos</h2>
+  <p class="contact-desc">Utilizá las flechas para navegar entre las capturas de cada sistema.</p>
+
+  <div class="projects-grid">
+    
+   <!-- SECCIÓN EXPERIENCIA Y PROYECTOS -->
+<section id="experience" class="section">
+  <h2 class="section-title">Trabajos y Proyectos</h2>
+  <p class="contact-desc">Utilizá las flechas para navegar entre las capturas de cada sistema.</p>
+
+  <div class="projects-grid">
+    
+    <!-- PROYECTO 1: Gestión Distribuidora -->
+    <article class="project-card">
+      <div class="slider-container" id="slider-1">
+        <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
+        <div class="slider-track">
+          <img src="assets/img/gestionDistribuidora/listadoPrecios.jpg" alt="Listado de Precios" class="slide-img active">
+          <img src="assets/img/gestionDistribuidora/productos.jpg" alt="Gestión de Productos" class="slide-img">
+          <img src="assets/img/gestionDistribuidora/ventas.jpg" alt="Módulo de Ventas" class="slide-img">
+        </div>
+        <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
+      </div>
+      <div class="carousel-info">
+        <h3>1. Gestión Distribuidora / Compras</h3>
+        <p>Sistema Java Swing con SQLite para control de tickets, stock e inventario.</p>
+      </div>
+    </article>
+
+    <!-- PROYECTO 2: App Club Deportivo -->
+    <article class="project-card">
+      <div class="slider-container" id="slider-2">
+        <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
+        <div class="slider-track">
+          <!-- Revisá que los nombres de las imágenes coincidan exactamente con las de tu carpeta -->
+          <img src="assets/img/gestionClub/menuPrincipal.jpg" alt="Menú Principal" class="slide-img active">
+          <img src="assets/img/gestionClub/regiastoPersona.jpg" alt="Registro Persona" class="slide-img">
+          <img src="assets/img/gestionClub/registros.jpg" alt="Registros" class="slide-img">
+        </div>
+        <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
+      </div>
+      <div class="carousel-info">
+        <h3>2. App Club Deportivo</h3>
+        <p>Aplicación móvil nativa en Kotlin para administración de socios y cuotas.</p>
+      </div>
+    </article>
+
+  
+  </div>
+</section>
 
     <!-- Sección Personal Libre (Requisito Obligatorio) -->
     <section id="personal" class="section personal">
