@@ -16,37 +16,37 @@
 </head>
 <body>
 
- <!-- Encabezado y Navegación Principal -->
-<header class="header">
-  <div class="logo">
-    <div class="logo-tooltip-container">
-      <a href="#hero">
-        <img src="assets/img/logo.png" alt="Logo de Sergio" class="logo-img">
-      </a>
-      <!-- Cartel desplegable con enlaces cliqueables -->
-      <div class="tooltip-text">
-        <p>📧 sergio@ejemplo.com</p>
-        <p>📱 +54 9 3751 12-3456</p>
-        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="tooltip-link">
-          💼 Ver mi LinkedIn
+  <!-- Encabezado y Navegación Principal -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-tooltip-container">
+        <a href="#hero">
+          <img src="assets/img/logo.png" alt="Logo de Sergio" class="logo-img">
         </a>
+        <!-- Cartel desplegable con enlaces cliqueables -->
+        <div class="tooltip-text">
+          <p>📧 sergio@ejemplo.com</p>
+          <p>📱 +54 9 3751 12-3456</p>
+          <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="tooltip-link">
+            💼 Ver mi LinkedIn
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
-<!-- Botón Menú Hamburguesa -->
-  <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-  
+    <!-- Botón Menú Hamburguesa -->
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    
     <nav class="nav" id="nav-menu">
       <ul class="nav-list">
         <li><a href="#hero" class="nav-link">Inicio</a></li>
         <li><a href="#about" class="nav-link">Sobre mí</a></li>
         <li><a href="#skills" class="nav-link">Habilidades</a></li>
-        <li><a href="#experience" class="nav-link">Proyectos</a></li>
+        <li><a href="#experience" class="nav-link">Trabajos</a></li>
         <li><a href="#personal" class="nav-link">Proyectos</a></li>
         <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
@@ -60,25 +60,20 @@
     <section id="hero" class="section hero">
       <div class="hero-content">
         <h1 class="hero-title">Hola, soy <span class="highlight">Sergio Alberto Arenhardt</span></h1>
-        <p class="hero-subtitle">Desarrollador de Software &amp; Estudiante del IFTS-29 la carrera de Tecnicatura Superior en Desarrollo de Software </p>
+        <p class="hero-subtitle">Desarrollador de Software &amp; Estudiante del IFTS-29 la carrera de Tecnicatura Superior en Desarrollo de Software</p>
         <p class="hero-text">Apasionado por la resolución de problemas, bases de datos y la creación de soluciones digitales limpias y eficientes.</p>
         
- <div class="hero-actions">
-  <!-- Enlace a GitHub formateado igual al estilo de botón Vercel -->
-  <a href="https://github.com/sealar24" target="_blank" rel="noopener noreferrer" class="btn btn-vercel">
-    Mi Perfil de GitHub
-  </a>
-
-  <!-- Enlace a Vercel -->
-  <a href="https://porfolio-rho-olive.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-vercel">
-    Ver en Vercel
-  </a>
-
-  <!-- Enlace a Contactar -->
-  <a href="#contact" class="btn btn-secondary">
-    Contactar
-  </a>
-</div>
+        <div class="hero-actions">
+          <a href="https://github.com/sealar24" target="_blank" rel="noopener noreferrer" class="btn btn-vercel">
+            Mi Perfil de GitHub
+          </a>
+          <a href="https://porfolio-rho-olive.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-vercel">
+            Ver en Vercel
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Contactar
+          </a>
+        </div>
       </div>
     </section>
 
@@ -94,7 +89,7 @@
       </div>
     </section>
 
-    <!-- Sección Habilidades (Flexbox Layout) -->
+    <!-- Sección Habilidades -->
     <section id="skills" class="section skills">
       <h2 class="section-title">Habilidades Técnicas</h2>
       <div class="skills-container">
@@ -123,71 +118,61 @@
           <h3 class="skill-title">Bases de Datos &amp; Herramientas</h3>
           <ul class="skill-list">
             <li>SQLite</li>
-            <li>Base de Datos Relacionales MySQLS </li>
-            <li>IDE IntelliJ ademas de Eclipse </li>
+            <li>Bases de Datos Relacionales MySQL</li>
+            <li>IDE IntelliJ &amp; Eclipse</li>
             <li>Git &amp; GitHub</li>
             <li>Android Studio</li>
-            
           </ul>
         </article>
 
       </div>
     </section>
 
-<!-- SECCIÓN EXPERIENCIA Y PROYECTOS -->
-<section id="experience" class="section">
-  <h2 class="section-title">Trabajos y Proyectos</h2>
-  <p class="contact-desc">Utilizá las flechas para navegar entre las capturas de cada sistema.</p>
+    <!-- SECCIÓN EXPERIENCIA Y PROYECTOS -->
+    <section id="experience" class="section">
+      <h2 class="section-title">Trabajos y Proyectos</h2>
+      <p class="contact-desc">Utilizá las flechas para navegar entre las capturas de cada sistema.</p>
 
-  <div class="projects-grid">
-    
-   <!-- SECCIÓN EXPERIENCIA Y PROYECTOS -->
-<section id="experience" class="section">
-  <h2 class="section-title">Trabajos y Proyectos</h2>
-  <p class="contact-desc">Utilizá las flechas para navegar entre las capturas de cada sistema.</p>
+      <div class="projects-grid">
+        
+        <!-- PROYECTO 1 -->
+        <article class="project-card">
+          <div class="slider-container" id="slider-1">
+            <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
+            <div class="slider-track">
+              <img src="assets/img/gestionDistribuidora/inicio.jpg" alt="Listado de Precios" class="slide-img active">
+              <img src="assets/img/gestionDistribuidora/listadoPrecios.jpg" alt="Gestión de Productos" class="slide-img">
+              <img src="assets/img/gestionDistribuidora/presupuesto.jpg" alt="Módulo de Ventas" class="slide-img">
+            </div>
+            <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
+          </div>
+          <div class="carousel-info">
+            <h3>1. Gestión Distribuidora / Compras</h3>
+            <p>Sistema Java Swing con SQLite para control de tickets, stock e inventario.</p>
+          </div>
+        </article>
 
-  <div class="projects-grid">
-    
-    
-    <article class="project-card">
-      <div class="slider-container" id="slider-1">
-        <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
-        <div class="slider-track">
-          <img src="assets/img/gestionDistribuidora/listadoPrecios.jpg" alt="Listado de Precios" class="slide-img active">
-          <img src="assets/img/gestionDistribuidora/productos.jpg" alt="Gestión de Productos" class="slide-img">
-          <img src="assets/img/gestionDistribuidora/ventas.jpg" alt="Módulo de Ventas" class="slide-img">
-        </div>
-        <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
+        <!-- PROYECTO 2 -->
+        <article class="project-card">
+          <div class="slider-container" id="slider-2">
+            <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
+            <div class="slider-track">
+              <img src="assets/img/gestionClub/menuPrincipal.jpg" alt="Menú Principal" class="slide-img active">
+              <img src="assets/img/gestionClub/regiastoPersona.jpg" alt="Registro Persona" class="slide-img">
+              <img src="assets/img/gestionClub/registros.jpg" alt="Registros" class="slide-img">
+            </div>
+            <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
+          </div>
+          <div class="carousel-info">
+            <h3>2. App Club Deportivo</h3>
+            <p>Aplicación móvil nativa en Kotlin para administración de socios y cuotas.</p>
+          </div>
+        </article>
+
       </div>
-      <div class="carousel-info">
-        <h3>1. Gestión Distribuidora / Compras</h3>
-        <p>Sistema Java Swing con SQLite para control de tickets, stock e inventario.</p>
-      </div>
-    </article>
+    </section>
 
-    <!-- PROYECTO 2: App Club Deportivo -->
-    <article class="project-card">
-      <div class="slider-container" id="slider-2">
-        <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
-        <div class="slider-track">
-          <!-- Revisá que los nombres de las imágenes coincidan exactamente con las de tu carpeta -->
-          <img src="assets/img/gestionClub/menuPrincipal.jpg" alt="Menú Principal" class="slide-img active">
-          <img src="assets/img/gestionClub/regiastoPersona.jpg" alt="Registro Persona" class="slide-img">
-          <img src="assets/img/gestionClub/registros.jpg" alt="Registros" class="slide-img">
-        </div>
-        <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
-      </div>
-      <div class="carousel-info">
-        <h3>2. App Club Deportivo</h3>
-        <p>Aplicación móvil nativa en Kotlin para administración de socios y cuotas.</p>
-      </div>
-    </article>
-
-  
-  </div>
-</section>
-
-    <!-- Sección Personal Libre (Requisito Obligatorio) -->
+    <!-- Sección Personal Libre -->
     <section id="personal" class="section personal">
       <h2 class="section-title">Áreas de Interés &amp; Proyectos</h2>
       <div class="personal-container">
@@ -202,7 +187,7 @@
       </div>
     </section>
 
-    <!-- Formulario de Contacto (Requisito Obligatorio) -->
+    <!-- Formulario de Contacto -->
     <section id="contact" class="section contact">
       <h2 class="section-title">Contacto</h2>
       <p class="contact-desc">Déjame un mensaje y la información se guardará localmente en tu sesión.</p>
@@ -226,7 +211,6 @@
         <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
       </form>
 
-      <!-- Mensaje de confirmación del formulario -->
       <div id="form-feedback" class="form-feedback hidden"></div>
     </section>
 
@@ -234,12 +218,12 @@
 
   <!-- Pie de página -->
   <footer class="footer">
-  <p>&copy; 2026 Sergio. Todos los derechos reservados.</p>
-  <p>
-    <a href="https://github.com/sealar24/Porfolio" target="_blank" rel="noopener noreferrer">Repositorio de GitHub</a> | 
-    <a href="https://github.com/sealar24/Porfolio/blob/main/README.md" target="_blank" rel="noopener noreferrer">Ver README.md</a>
-  </p>
-</footer>
+    <p>&copy; 2026 Sergio. Todos los derechos reservados.</p>
+    <p>
+      <a href="https://github.com/sealar24/Porfolio" target="_blank" rel="noopener noreferrer">Repositorio de GitHub</a> | 
+      <a href="https://github.com/sealar24/Porfolio/blob/main/README.md" target="_blank" rel="noopener noreferrer">Ver README.md</a>
+    </p>
+  </footer>
 
   <!-- Scripts JavaScript -->
   <script src="assets/js/storage.js"></script>
