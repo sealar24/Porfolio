@@ -17,17 +17,17 @@
 <body>
 
   <!-- Encabezado y Navegación Principal -->
-  <header class="header">
+  <header class="encabezado">
     <div class="logo">
-      <div class="logo-tooltip-container">
-        <a href="#hero">
-          <img src="assets/img/logo.png" alt="Logo de Sergio" class="logo-img">
+      <div class="contenedor-cartel-logo">
+        <a href="#inicio">
+          <img src="assets/img/logo.png" alt="Logo de Sergio" class="imagen-logo">
         </a>
         <!-- Cartel desplegable con enlaces cliqueables -->
-        <div class="tooltip-text">
+        <div class="texto-cartel">
           <p>📧 sergio@ejemplo.com</p>
           <p>📱 +54 9 3751 12-3456</p>
-          <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="tooltip-link">
+          <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="enlace-cartel">
             💼 Ver mi LinkedIn
           </a>
         </div>
@@ -35,20 +35,20 @@
     </div>
 
     <!-- Botón Menú Hamburguesa -->
-    <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+    <button class="boton-hamburguesa" id="boton-hamburguesa" aria-label="Abrir menú">
+      <span class="barra"></span>
+      <span class="barra"></span>
+      <span class="barra"></span>
     </button>
     
-    <nav class="nav" id="nav-menu">
-      <ul class="nav-list">
-        <li><a href="#hero" class="nav-link">Inicio</a></li>
-        <li><a href="#about" class="nav-link">Sobre mí</a></li>
-        <li><a href="#skills" class="nav-link">Habilidades</a></li>
-        <li><a href="#experience" class="nav-link">Trabajos</a></li>
-        <li><a href="#personal" class="nav-link">Proyectos</a></li>
-        <li><a href="#contact" class="nav-link">Contacto</a></li>
+    <nav class="navegacion" id="menu-navegacion">
+      <ul class="lista-navegacion">
+        <li><a href="#inicio" class="enlace-navegacion">Inicio</a></li>
+        <li><a href="#sobre-mi" class="enlace-navegacion">Sobre mí</a></li>
+        <li><a href="#habilidades" class="enlace-navegacion">Habilidades</a></li>
+        <li><a href="#trabajos" class="enlace-navegacion">Trabajos</a></li>
+        <li><a href="#proyectos" class="enlace-navegacion">Proyectos</a></li>
+        <li><a href="#contacto" class="enlace-navegacion">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -57,20 +57,20 @@
   <main>
     
     <!-- Presentación Principal (Hero) -->
-    <section id="hero" class="section hero">
-      <div class="hero-content">
-        <h1 class="hero-title">Hola, soy <span class="highlight">Sergio Alberto Arenhardt</span></h1>
-        <p class="hero-subtitle">Desarrollador de Software &amp; Estudiante del IFTS-29 la carrera de Tecnicatura Superior en Desarrollo de Software</p>
-        <p class="hero-text">Apasionado por la resolución de problemas, bases de datos y la creación de soluciones digitales limpias y eficientes.</p>
+    <section id="inicio" class="seccion inicio">
+      <div class="contenido-inicio">
+        <h1 class="titulo-inicio">Hola, soy <span class="resaltado">Sergio Alberto Arenhardt</span></h1>
+        <p class="subtitulo-inicio">Desarrollador de Software &amp; Estudiante del IFTS-29 la carrera de Tecnicatura Superior en Desarrollo de Software</p>
+        <p class="texto-inicio">Apasionado por la resolución de problemas, bases de datos y la creación de soluciones digitales limpias y eficientes.</p>
         
-        <div class="hero-actions">
-          <a href="https://github.com/sealar24" target="_blank" rel="noopener noreferrer" class="btn btn-vercel">
+        <div class="acciones-inicio">
+          <a href="https://github.com/sealar24" target="_blank" rel="noopener noreferrer" class="boton boton-vercel">
             Mi Perfil de GitHub
           </a>
-          <a href="https://porfolio-rho-olive.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-vercel">
+          <a href="https://porfolio-rho-olive.vercel.app/" target="_blank" rel="noopener noreferrer" class="boton boton-vercel">
             Ver en Vercel
           </a>
-          <a href="#contact" class="btn btn-secondary">
+          <a href="#contacto" class="boton boton-secundario">
             Contactar
           </a>
         </div>
@@ -78,10 +78,10 @@
     </section>
 
     <!-- Sección Sobre Mí -->
-    <section id="about" class="section about">
-      <h2 class="section-title">Sobre mí</h2>
-      <div class="about-container">
-        <div class="about-card">
+    <section id="sobre-mi" class="seccion sobre-mi">
+      <h2 class="titulo-seccion">Sobre mí</h2>
+      <div class="contenedor-sobre-mi">
+        <div class="tarjeta-sobre-mi">
           <p>
             Me encuentro profundizando en el desarrollo Web Front End, combinando lógica de programación orientada a objetos con maquetación moderna e interactiva. Me motiva aprender nuevas tecnologías y escribir código estructurado.
           </p>
@@ -90,22 +90,22 @@
     </section>
 
     <!-- Sección Habilidades -->
-    <section id="skills" class="section skills">
-      <h2 class="section-title">Habilidades Técnicas</h2>
-      <div class="skills-container">
+    <section id="habilidades" class="seccion habilidades">
+      <h2 class="titulo-seccion">Habilidades Técnicas</h2>
+      <div class="contenedor-habilidades">
         
-        <article class="skill-card">
-          <h3 class="skill-title">Front End</h3>
-          <ul class="skill-list">
+        <article class="tarjeta-habilidad">
+          <h3 class="titulo-habilidad">Front End</h3>
+          <ul class="lista-habilidad">
             <li>HTML5 Semántico</li>
             <li>CSS3 (Flexbox &amp; Grid)</li>
             <li>JavaScript (ES6+)</li>
           </ul>
         </article>
 
-        <article class="skill-card">
-          <h3 class="skill-title">Lenguajes &amp; Lógica</h3>
-          <ul class="skill-list">
+        <article class="tarjeta-habilidad">
+          <h3 class="titulo-habilidad">Lenguajes &amp; Lógica</h3>
+          <ul class="lista-habilidad">
             <li>Java</li>
             <li>Spring Boot</li>
             <li>Spring Security</li>
@@ -114,9 +114,9 @@
           </ul>
         </article>
 
-        <article class="skill-card">
-          <h3 class="skill-title">Bases de Datos &amp; Herramientas</h3>
-          <ul class="skill-list">
+        <article class="tarjeta-habilidad">
+          <h3 class="titulo-habilidad">Bases de Datos &amp; Herramientas</h3>
+          <ul class="lista-habilidad">
             <li>SQLite</li>
             <li>Bases de Datos Relacionales MySQL</li>
             <li>IDE IntelliJ &amp; Eclipse</li>
@@ -129,41 +129,41 @@
     </section>
 
     <!-- SECCIÓN EXPERIENCIA Y PROYECTOS -->
-    <section id="experience" class="section">
-      <h2 class="section-title">Trabajos y Proyectos</h2>
-      <p class="contact-desc">Utilizá las flechas para navegar entre las capturas de cada sistema.</p>
+    <section id="trabajos" class="seccion">
+      <h2 class="titulo-seccion">Trabajos y Proyectos</h2>
+      <p class="descripcion-contacto">Utilizá las flechas para navegar entre las capturas de cada sistema.</p>
 
-      <div class="projects-grid">
+      <div class="grilla-proyectos">
         
         <!-- PROYECTO 1 -->
-        <article class="project-card">
-          <div class="slider-container" id="slider-1">
-            <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
-            <div class="slider-track">
-              <img src="assets/img/gestionDistribuidora/inicio.jpg" alt="Listado de Precios" class="slide-img active">
-              <img src="assets/img/gestionDistribuidora/listadoPrecios.jpg" alt="Gestión de Productos" class="slide-img">
-              <img src="assets/img/gestionDistribuidora/presupuesto.jpg" alt="Módulo de Ventas" class="slide-img">
+        <article class="tarjeta-proyecto">
+          <div class="contenedor-carrusel" id="carrusel-1">
+            <button class="boton-carrusel boton-anterior" aria-label="Anterior">&#10094;</button>
+            <div class="pista-carrusel">
+              <img src="assets/img/gestionDistribuidora/inicio.jpg" alt="Listado de Precios" class="imagen-diapositiva activo">
+              <img src="assets/img/gestionDistribuidora/listadoPrecios.jpg" alt="Gestión de Productos" class="imagen-diapositiva">
+              <img src="assets/img/gestionDistribuidora/presupuesto.jpg" alt="Módulo de Ventas" class="imagen-diapositiva">
             </div>
-            <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
+            <button class="boton-carrusel boton-siguiente" aria-label="Siguiente">&#10095;</button>
           </div>
-          <div class="carousel-info">
+          <div class="info-carrusel">
             <h3>1. Gestión Distribuidora / Compras</h3>
             <p>Sistema Java Swing con SQLite para control de tickets, stock e inventario.</p>
           </div>
         </article>
 
         <!-- PROYECTO 2 -->
-        <article class="project-card">
-          <div class="slider-container" id="slider-2">
-            <button class="slider-btn prev-btn" aria-label="Anterior">&#10094;</button>
-            <div class="slider-track">
-              <img src="assets/img/gestionClub/menuPrincipal.jpg" alt="Menú Principal" class="slide-img active">
-              <img src="assets/img/gestionClub/regiastoPersona.jpg" alt="Registro Persona" class="slide-img">
-              <img src="assets/img/gestionClub/registros.jpg" alt="Registros" class="slide-img">
+        <article class="tarjeta-proyecto">
+          <div class="contenedor-carrusel" id="carrusel-2">
+            <button class="boton-carrusel boton-anterior" aria-label="Anterior">&#10094;</button>
+            <div class="pista-carrusel">
+              <img src="assets/img/gestionClub/menuPrincipal.jpg" alt="Menú Principal" class="imagen-diapositiva activo">
+              <img src="assets/img/gestionClub/regiastoPersona.jpg" alt="Registro Persona" class="imagen-diapositiva">
+              <img src="assets/img/gestionClub/registros.jpg" alt="Registros" class="imagen-diapositiva">
             </div>
-            <button class="slider-btn next-btn" aria-label="Siguiente">&#10095;</button>
+            <button class="boton-carrusel boton-siguiente" aria-label="Siguiente">&#10095;</button>
           </div>
-          <div class="carousel-info">
+          <div class="info-carrusel">
             <h3>2. App Club Deportivo</h3>
             <p>Aplicación móvil nativa en Kotlin para administración de socios y cuotas.</p>
           </div>
@@ -173,14 +173,14 @@
     </section>
 
     <!-- Sección Personal Libre -->
-    <section id="personal" class="section personal">
-      <h2 class="section-title">Áreas de Interés &amp; Proyectos</h2>
-      <div class="personal-container">
-        <article class="personal-card">
+    <section id="proyectos" class="seccion personal">
+      <h2 class="titulo-seccion">Áreas de Interés &amp; Proyectos</h2>
+      <div class="contenedor-personal">
+        <article class="tarjeta-personal">
           <h3>Sistemas de Escritorio y Análisis de Datos</h3>
           <p>Desarrollo de aplicaciones de gestión local con persistencia en bases de datos SQLite o MySQL e interfaces gráficas intuitivas.</p>
         </article>
-        <article class="personal-card">
+        <article class="tarjeta-personal">
           <h3>Desarrollo Mobile</h3>
           <p>Creación de aplicaciones móviles nativas explorando arquitecturas modernas y consumo de datos locales o en la nube.</p>
         </article>
@@ -188,36 +188,36 @@
     </section>
 
     <!-- Formulario de Contacto -->
-    <section id="contact" class="section contact">
-      <h2 class="section-title">Contacto</h2>
-      <p class="contact-desc">Déjame un mensaje y la información se guardará localmente en tu sesión.</p>
+    <section id="contacto" class="seccion contacto">
+      <h2 class="titulo-seccion">Contacto</h2>
+      <p class="descripcion-contacto">Déjame un mensaje y la información se guardará localmente en tu sesión.</p>
       
-      <form id="contact-form" class="contact-form">
-        <div class="form-group">
-          <label for="name">Nombre Completo:</label>
-          <input type="text" id="name" name="name" placeholder="Ej: Sergio Pérez" required>
+      <form id="formulario-contacto" class="formulario-contacto">
+        <div class="grupo-formulario">
+          <label for="nombre">Nombre Completo:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Sergio Pérez" required>
         </div>
 
-        <div class="form-group">
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        <div class="grupo-formulario">
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
         </div>
 
-        <div class="form-group">
-          <label for="message">Mensaje:</label>
-          <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <div class="grupo-formulario">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        <button type="submit" class="boton boton-primario">Enviar Mensaje</button>
       </form>
 
-      <div id="form-feedback" class="form-feedback hidden"></div>
+      <div id="aviso-formulario" class="aviso-formulario oculto"></div>
     </section>
 
   </main>
 
   <!-- Pie de página -->
-  <footer class="footer">
+  <footer class="pie-pagina">
     <p>&copy; 2026 Sergio. Todos los derechos reservados.</p>
     <p>
       <a href="https://github.com/sealar24/Porfolio" target="_blank" rel="noopener noreferrer">Repositorio de GitHub</a> | 

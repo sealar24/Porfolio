@@ -1,99 +1,99 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById('contact-form');
-  const feedbackElement = document.getElementById('form-feedback');
+  const formularioContacto = document.getElementById('formulario-contacto');
+  const elementoAviso = document.getElementById('aviso-formulario');
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+  if (formularioContacto) {
+    formularioContacto.addEventListener('submit', (evento) => {
+      evento.preventDefault();
 
       // 1. Obtener valores de los campos
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+      const nombre = document.getElementById('nombre').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
 
-      if (!name || !email || !message) {
-        showFeedback('Por favor, completa todos los campos del formulario.', true);
+      if (!nombre || !correo || !mensaje) {
+        mostrarAviso('Por favor, completa todos los campos del formulario.', true);
         return;
       }
 
       // 2. Crear objeto de datos con marca de tiempo
-      const submissionData = {
-        name,
-        email,
-        message,
-        timestamp: new Date().toLocaleString()
+      const datosMensaje = {
+        nombre,
+        correo,
+        mensaje,
+        fechaHora: new Date().toLocaleString()
       };
 
       // 3. Persistir datos localmente (localStorage)
-      StorageModule.saveSubmission(submissionData);
+      ModuloAlmacenamiento.guardarMensaje(datosMensaje);
 
       // 4. (Opcional) Descargar copia en .txt
-      StorageModule.downloadAsTxtFile(submissionData);
+      ModuloAlmacenamiento.descargarComoTxt(datosMensaje);
 
       // 5. Limpiar formulario y notificar al usuario
-      contactForm.reset();
-      showFeedback(`¡Gracias ${name}! Tu mensaje ha sido guardado localmente y se generó una copia en .txt.`);
+      formularioContacto.reset();
+      mostrarAviso(`¡Gracias ${nombre}! Tu mensaje ha sido guardado localmente y se generó una copia en .txt.`);
     });
   }
 
-  function showFeedback(text, isError = false) {
-    feedbackElement.textContent = text;
-    feedbackElement.classList.remove('hidden');
-    
-    if (isError) {
-      feedbackElement.style.color = '#f87171';
-      feedbackElement.style.borderColor = '#f87171';
+  function mostrarAviso(texto, esError = false) {
+    elementoAviso.textContent = texto;
+    elementoAviso.classList.remove('oculto');
+
+    if (esError) {
+      elementoAviso.style.color = '#f87171';
+      elementoAviso.style.borderColor = '#f87171';
     } else {
-      feedbackElement.style.color = 'var(--color-primary)';
-      feedbackElement.style.borderColor = 'var(--color-primary)';
+      elementoAviso.style.color = 'var(--color-primario)';
+      elementoAviso.style.borderColor = 'var(--color-primario)';
     }
 
     setTimeout(() => {
-      feedbackElement.classList.add('hidden');
+      elementoAviso.classList.add('oculto');
     }, 5000);
   }
   // Lógica del Menú Hamburguesa
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const navMenu = document.getElementById('nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
+const botonHamburguesa = document.getElementById('boton-hamburguesa');
+const menuNavegacion = document.getElementById('menu-navegacion');
+const enlacesNavegacion = document.querySelectorAll('.enlace-navegacion');
 
-if (hamburgerBtn && navMenu) {
+if (botonHamburguesa && menuNavegacion) {
   // Alternar apertura al hacer clic en la hamburguesa
-  hamburgerBtn.addEventListener('click', () => {
-    hamburgerBtn.classList.toggle('active');
-    navMenu.classList.toggle('active');
+  botonHamburguesa.addEventListener('click', () => {
+    botonHamburguesa.classList.toggle('activo');
+    menuNavegacion.classList.toggle('activo');
   });
 
   // Cerrar el menú automáticamente al tocar cualquier opción de navegación
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburgerBtn.classList.remove('active');
-      navMenu.classList.remove('active');
+  enlacesNavegacion.forEach(enlace => {
+    enlace.addEventListener('click', () => {
+      botonHamburguesa.classList.remove('activo');
+      menuNavegacion.classList.remove('activo');
     });
   });
 }
 
 // --- LÓGICA DE TRANSICIÓN DE IMÁGENES EN PROYECTOS ---
-document.querySelectorAll('.slider-container').forEach(container => {
-  const slides = container.querySelectorAll('.slide-img');
-  const prevBtn = container.querySelector('.prev-btn');
-  const nextBtn = container.querySelector('.next-btn');
-  let currentIndex = 0;
+document.querySelectorAll('.contenedor-carrusel').forEach(contenedor => {
+  const diapositivas = contenedor.querySelectorAll('.imagen-diapositiva');
+  const botonAnterior = contenedor.querySelector('.boton-anterior');
+  const botonSiguiente = contenedor.querySelector('.boton-siguiente');
+  let indiceActual = 0;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
+  function mostrarDiapositiva(indice) {
+    diapositivas.forEach((diapositiva, i) => {
+      diapositiva.classList.toggle('activo', i === indice);
     });
   }
 
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-    showSlide(currentIndex);
+  botonAnterior.addEventListener('click', () => {
+    indiceActual = (indiceActual === 0) ? diapositivas.length - 1 : indiceActual - 1;
+    mostrarDiapositiva(indiceActual);
   });
 
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-    showSlide(currentIndex);
+  botonSiguiente.addEventListener('click', () => {
+    indiceActual = (indiceActual === diapositivas.length - 1) ? 0 : indiceActual + 1;
+    mostrarDiapositiva(indiceActual);
   });
 });
 
